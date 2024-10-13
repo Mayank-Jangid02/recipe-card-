@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <style type="text/css">
+        body{
+            background-image: url("data:image/jpeg;base64,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");
+        background-repeat: no-repeat;
+        background-attachment: relative;
+        background-size: contain;
+        }
+    </style>
+</head>
+<body>
+    <header></header>
+        <!-- Nav bar starts here -->
+        <div class="nav-bar">
+            <div class="name">Delicious Recipies</div>
+            
+                <div class="nav-details">
+                    <div class="nav-icon">&#9776;</div>
+
+                    <a href="https://www.tajfoods.com/">Home</a><br>
+                    <a href="https://pinchofyum.com/">Recipies</a><br>
+                    <a href="https://extension.unr.edu/publication.aspx?PubID=4643">About</a><br>
+                    <a href="">Contact</a><br>
+                </div>
+           <!-- </div> -->
+        </div>
+         <!-- Nav bar ends here -->
+
+
+          <!-- Hero Section Starts here -->
+           <div class="hero">
+                <div class="hero-info">
+                    <h1>Welcome to our Recipe Collection!</h1>
+                    <h5>savor the Flavor: explor our Delicious Recipes!</h5>
+                    <h4>Love At First Bite</h4>
+                    <div class="search">
+                        <input placeholder="Search Recipies">
+                        <button>Search</button>
+                    </div>
+                </div>
+            </div>          
+           <!-- Hero section ends here -->
+    </header>
+    <main>
+        <div class="content">
+            <div class="heading">
+                <h2>Featured recipies</h2>
+            </div>
+            <div class="recipe-container">
+
+
+                <!-- ....single recipe starts here.... -->
+                <div class="card-container">
+                    <div class="card">
+                        <div class="card-front">
+
+                            <img src="https://kannanskitchen.com/wp-content/uploads/2021/07/DSC_8173-5-1024x1536.jpg">
+                            <div class="details">
+                                <h2>Dal Bati Churma</h2>
+                                <h3>Rajesthan famous dish</h3>
+                                <p>Lorem ipsum dolor sit, Adipisci voluptatum harum nulla, officia assumenda cum. </p>
+                                <a href="#">View Recipe</a>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <h1>Recipe</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque nemo sed consequatur minima, minus mollitia soluta perspiciatis. Unde, cum incidunt aut enim, laudantium deleniti nihil veritatis adipisci eum eveniet fuga? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita ad dolores alias illum reiciendis facere dolore et ipsa tenetur! Magni excepturi corrupti sunt quis facilis dicta atque obcaecati doloribus eligendi.
+                            Quam sed est, officiis repudiandae optio voluptate ut ratione nisi perspiciatis aliquid dolorum incidunt aperiam facilis odio culpa? Quos maiores laborum earum perferendis alias, qui repellendus. Eveniet commodi enim quisquam!
+                            Necessitatibus perspiciatis laborum dignissimos aliquid a, aut eum explicabo doloremque numquam facilis, fugiat fuga ipsam unde voluptatibus officiis beatae expedita, doloribus iste magni! Animi ullam ipsum maiores consequatur, sapiente veniam?
+                            Pariatur ex, minima esse, at architecto expedita quibusdam sequi exercitationem cum veritatis obcaecati assumenda iusto debitis totam molestiae porro quos iure velit? Provident possimus obcaecati omnis at, incidunt recusandae quibusdam.</p>
+                        </div>
+                    </div>
+                </div>               
+                <!-- .....single recipe ends here...... -->
+
+                  <!-- ....single recipe starts here.... -->
+                  <div class="card-container">
+                    <div class="card">
+                        <div class="card-front">
+
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/%22Hyderabadi_Dum_Biryani%22.jpg">
+                            <div class="details">
+                                <h2>Biryani</h2>
+                                <h3>Famous in Hyderabad</h3>
+                                <p>A popular dish of rice that's served all over the world. 
+                                </p>
+                                <a href="#">View Recipe</a>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <h1>Recipe</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque nemo sed consequatur minima, minus mollitia soluta perspiciatis. Unde, cum incidunt aut enim, laudantium deleniti nihil veritatis adipisci eum eveniet fuga? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita ad dolores alias illum reiciendis facere dolore et ipsa tenetur! Magni excepturi corrupti sunt quis facilis dicta atque obcaecati doloribus eligendi.
+                            Quam sed est, officiis repudiandae optio voluptate ut ratione nisi perspiciatis aliquid dolorum incidunt aperiam facilis odio culpa? Quos maiores laborum earum perferendis alias, qui repellendus. Eveniet commodi enim quisquam!
+                            Necessitatibus perspiciatis laborum dignissimos aliquid a, aut eum explicabo doloremque numquam facilis, fugiat fuga ipsam unde voluptatibus officiis beatae expedita, doloribus iste magni! Animi ullam ipsum maiores consequatur, sapiente veniam?
+                            Pariatur ex, minima esse, at architecto expedita quibusdam sequi exercitationem cum veritatis obcaecati assumenda iusto debitis totam molestiae porro quos iure velit? Provident possimus obcaecati omnis at, incidunt recusandae quibusdam.</p>
+                        </div>
+                    </div>
+                </div>               
+                <!-- .....single recipe ends here...... -->
+
+                  <!-- ....single recipe starts here.... -->
+                  <div class="card-container">
+                    <div class="card">
+                        <div class="card-front">
+
+                            <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTqlZAOuX9V2865eDy3ERWs0VuDkY6ehT635yiOeM0umqDpC9gc">
+                            <div class="details">
+                                <h2>Dosa</h2>
+                                <h3>Famous in South India</h3>
+                                <p>Lorem ipsum dolor sit, Adipisci voluptatum harum nulla, officia assumenda cum. </p>
+                                <a href="#">View Recipe</a>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <h1>Recipe</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque nemo sed consequatur minima, minus mollitia soluta perspiciatis. Unde, cum incidunt aut enim, laudantium deleniti nihil veritatis adipisci eum eveniet fuga? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita ad dolores alias illum reiciendis facere dolore et ipsa tenetur! Magni excepturi corrupti sunt quis facilis dicta atque obcaecati doloribus eligendi.
+                            Quam sed est, officiis repudiandae optio voluptate ut ratione nisi perspiciatis aliquid dolorum incidunt aperiam facilis odio culpa? Quos maiores laborum earum perferendis alias, qui repellendus. Eveniet commodi enim quisquam!
+                            Necessitatibus perspiciatis laborum dignissimos aliquid a, aut eum explicabo doloremque numquam facilis, fugiat fuga ipsam unde voluptatibus officiis beatae expedita, doloribus iste magni! Animi ullam ipsum maiores consequatur, sapiente veniam?
+                            Pariatur ex, minima esse, at architecto expedita quibusdam sequi exercitationem cum veritatis obcaecati assumenda iusto debitis totam molestiae porro quos iure velit? Provident possimus obcaecati omnis at, incidunt recusandae quibusdam.</p>
+                        </div>
+                    </div>
+                </div>               
+                <!-- .....single recipe ends here...... -->
+
+                  <!-- ....single recipe starts here.... -->
+                  <div class="card-container">
+                    <div class="card">
+                        <div class="card-front">
+
+                            <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2021/12/samosa-recipe.jpg">
+                            <div class="details">
+                                <h2>Smosa</h2>
+                                <p>Jab tak rahega samose mai aalu tab tak rahegi tu meri shalu. </p>
+                                
+                                <a href="#">View Recipe</a>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <h1>Recipe</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque nemo sed consequatur minima, minus mollitia soluta perspiciatis. Unde, cum incidunt aut enim, laudantium deleniti nihil veritatis adipisci eum eveniet fuga? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita ad dolores alias illum reiciendis facere dolore et ipsa tenetur! Magni excepturi corrupti sunt quis facilis dicta atque obcaecati doloribus eligendi.
+                            Quam sed est, officiis repudiandae optio voluptate ut ratione nisi perspiciatis aliquid dolorum incidunt aperiam facilis odio culpa? Quos maiores laborum earum perferendis alias, qui repellendus. Eveniet commodi enim quisquam!
+                            Necessitatibus perspiciatis laborum dignissimos aliquid a, aut eum explicabo doloremque numquam facilis, fugiat fuga ipsam unde voluptatibus officiis beatae expedita, doloribus iste magni! Animi ullam ipsum maiores consequatur, sapiente veniam?
+                            Pariatur ex, minima esse, at architecto expedita quibusdam sequi exercitationem cum veritatis obcaecati assumenda iusto debitis totam molestiae porro quos iure velit? Provident possimus obcaecati omnis at, incidunt recusandae quibusdam.</p>
+                        </div>
+                    </div>
+                </div>               
+                <!-- .....single recipe ends here...... -->
+
+                  <!-- ....single recipe starts here.... -->
+                  <div class="card-container">
+                    <div class="card">
+                        <div class="card-front">
+
+                            <img src="data:image/jpeg;base64,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">
+                            <div class="details">
+                                <h2>Gulab-Jamun</h2>
+                                <p>A sweet dessert made with milk and rose water that's popular across India</p>
+                                <a href="#">View Recipe</a>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <h1>Recipe</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque nemo sed consequatur minima, minus mollitia soluta perspiciatis. Unde, cum incidunt aut enim, laudantium deleniti nihil veritatis adipisci eum eveniet fuga? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita ad dolores alias illum reiciendis facere dolore et ipsa tenetur! Magni excepturi corrupti sunt quis facilis dicta atque obcaecati doloribus eligendi.
+                            Quam sed est, officiis repudiandae optio voluptate ut ratione nisi perspiciatis aliquid dolorum incidunt aperiam facilis odio culpa? Quos maiores laborum earum perferendis alias, qui repellendus. Eveniet commodi enim quisquam!
+                            Necessitatibus perspiciatis laborum dignissimos aliquid a, aut eum explicabo doloremque numquam facilis, fugiat fuga ipsam unde voluptatibus officiis beatae expedita, doloribus iste magni! Animi ullam ipsum maiores consequatur, sapiente veniam?
+                            Pariatur ex, minima esse, at architecto expedita quibusdam sequi exercitationem cum veritatis obcaecati assumenda iusto debitis totam molestiae porro quos iure velit? Provident possimus obcaecati omnis at, incidunt recusandae quibusdam.</p>
+                        </div>
+                    </div>
+                </div>               
+                <!-- .....single recipe ends here...... -->
+
+                 <!-- ....single recipe starts here.... -->
+                 <div class="card-container">
+                    <div class="card">
+                        <div class="card-front">
+
+                            <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTHcGFA7lrRc0rTMpalM-bP08HoEzvzXYx54rwml-fUH7UADOBm">
+                            <div class="details">
+                                <h2>Bda Pao</h2>
+                                <p>A popular street food snack in India, especially in Mumbai, that consists of a fried potato dumpling in a soft bread roll. </p>
+                                <a href="#">View Recipe</a>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <h1>Recipe</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque nemo sed consequatur minima, minus mollitia soluta perspiciatis. Unde, cum incidunt aut enim, laudantium deleniti nihil veritatis adipisci eum eveniet fuga? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita ad dolores alias illum reiciendis facere dolore et ipsa tenetur! Magni excepturi corrupti sunt quis facilis dicta atque obcaecati doloribus eligendi.
+                            Quam sed est, officiis repudiandae optio voluptate ut ratione nisi perspiciatis aliquid dolorum incidunt aperiam facilis odio culpa? Quos maiores laborum earum perferendis alias, qui repellendus. Eveniet commodi enim quisquam!
+                            Necessitatibus perspiciatis laborum dignissimos aliquid a, aut eum explicabo doloremque numquam facilis, fugiat fuga ipsam unde voluptatibus officiis beatae expedita, doloribus iste magni! Animi ullam ipsum maiores consequatur, sapiente veniam?
+                            Pariatur ex, minima esse, at architecto expedita quibusdam sequi exercitationem cum veritatis obcaecati assumenda iusto debitis totam molestiae porro quos iure velit? Provident possimus obcaecati omnis at, incidunt recusandae quibusdam.</p>
+                        </div>
+                    </div>
+                </div>               
+                <!-- .....single recipe ends here...... -->
+
+                  <!-- ....single recipe starts here.... -->
+                  <div class="card-container">
+                    <div class="card">
+                        <div class="card-front">
+
+                            <img src="https://res.cloudinary.com/rainforest-cruises/images/c_fill,g_auto/f_auto,q_auto/w_1120,h_732,c_fill,g_auto/v1661347465/india-food-aloo-chaat/india-food-aloo-chaat-1120x732.jpg">
+                            <div class="details">
+                                <h2>Chat</h2>
+                                <p>haat and chat anyone? Head for the nearest street vendor selling these snack-size mini-meals and socialize! </p>
+                                <a href="#">View Recipe</a>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <h1>Recipe</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque nemo sed consequatur minima, minus mollitia soluta perspiciatis. Unde, cum incidunt aut enim, laudantium deleniti nihil veritatis adipisci eum eveniet fuga? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita ad dolores alias illum reiciendis facere dolore et ipsa tenetur! Magni excepturi corrupti sunt quis facilis dicta atque obcaecati doloribus eligendi.
+                            Quam sed est, officiis repudiandae optio voluptate ut ratione nisi perspiciatis aliquid dolorum incidunt aperiam facilis odio culpa? Quos maiores laborum earum perferendis alias, qui repellendus. Eveniet commodi enim quisquam!
+                            Necessitatibus perspiciatis laborum dignissimos aliquid a, aut eum explicabo doloremque numquam facilis, fugiat fuga ipsam unde voluptatibus officiis beatae expedita, doloribus iste magni! Animi ullam ipsum maiores consequatur, sapiente veniam?
+                            Pariatur ex, minima esse, at architecto expedita quibusdam sequi exercitationem cum veritatis obcaecati assumenda iusto debitis totam molestiae porro quos iure velit? Provident possimus obcaecati omnis at, incidunt recusandae quibusdam.</p>
+                        </div>
+                    </div>
+                </div>               
+                <!-- .....single recipe ends here...... -->
+
+                  <!-- ....single recipe starts here.... -->
+                  <div class="card-container">
+                    <div class="card">
+                        <div class="card-front">
+
+                            <img src="https://res.cloudinary.com/rainforest-cruises/images/c_fill,g_auto/f_auto,q_auto/w_1120,h_732,c_fill,g_auto/v1661887113/indian-food/indian-food-1120x732.jpg">
+                            <div class="details">
+                                <h2>Dahi Bde</h2>
+                                <p>Traditional Indian food is renowned worldwide for its wonderful use. </p>
+                                <a href="#">View Recipe</a>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <h1>Recipe</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque nemo sed consequatur minima, minus mollitia soluta perspiciatis. Unde, cum incidunt aut enim, laudantium deleniti nihil veritatis adipisci eum eveniet fuga? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita ad dolores alias illum reiciendis facere dolore et ipsa tenetur! Magni excepturi corrupti sunt quis facilis dicta atque obcaecati doloribus eligendi.
+                            Quam sed est, officiis repudiandae optio voluptate ut ratione nisi perspiciatis aliquid dolorum incidunt aperiam facilis odio culpa? Quos maiores laborum earum perferendis alias, qui repellendus. Eveniet commodi enim quisquam!
+                            Necessitatibus perspiciatis laborum dignissimos aliquid a, aut eum explicabo doloremque numquam facilis, fugiat fuga ipsam unde voluptatibus officiis beatae expedita, doloribus iste magni! Animi ullam ipsum maiores consequatur, sapiente veniam?
+                            Pariatur ex, minima esse, at architecto expedita quibusdam sequi exercitationem cum veritatis obcaecati assumenda iusto debitis totam molestiae porro quos iure velit? Provident possimus obcaecati omnis at, incidunt recusandae quibusdam.</p>
+                        </div>
+                    </div>
+                </div>               
+                <!-- .....single recipe ends here...... -->
+
+                  <!-- ....single recipe starts here.... -->
+                  <div class="card-container">
+                    <div class="card">
+                        <div class="card-front">
+
+                            <img src="https://res.cloudinary.com/rainforest-cruises/images/c_fill,g_auto/f_auto,q_auto/w_1120,h_732,c_fill,g_auto/v1661347416/india-food-idli/india-food-idli-1120x732.jpg">
+                            <div class="details">
+                                <h2>Idle</h2>
+                                <p>Cake for breakfast anyone? Idli is a favorite savory morning staple in South India. </p>
+                                <a href="#">View Recipe</a>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <h1>Recipe</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque nemo sed consequatur minima, minus mollitia soluta perspiciatis. Unde, cum incidunt aut enim, laudantium deleniti nihil veritatis adipisci eum eveniet fuga? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita ad dolores alias illum reiciendis facere dolore et ipsa tenetur! Magni excepturi corrupti sunt quis facilis dicta atque obcaecati doloribus eligendi.
+                            Quam sed est, officiis repudiandae optio voluptate ut ratione nisi perspiciatis aliquid dolorum incidunt aperiam facilis odio culpa? Quos maiores laborum earum perferendis alias, qui repellendus. Eveniet commodi enim quisquam!
+                            Necessitatibus perspiciatis laborum dignissimos aliquid a, aut eum explicabo doloremque numquam facilis, fugiat fuga ipsam unde voluptatibus officiis beatae expedita, doloribus iste magni! Animi ullam ipsum maiores consequatur, sapiente veniam?
+                            Pariatur ex, minima esse, at architecto expedita quibusdam sequi exercitationem cum veritatis obcaecati assumenda iusto debitis totam molestiae porro quos iure velit? Provident possimus obcaecati omnis at, incidunt recusandae quibusdam.</p>
+                        </div>
+                    </div>
+                </div>               
+                <!-- .....single recipe ends here...... -->
+
+                  <!-- ....single recipe starts here.... -->
+                  <div class="card-container">
+                    <div class="card">
+                        <div class="card-front">
+
+                            <img src="https://res.cloudinary.com/rainforest-cruises/images/c_fill,g_auto/f_auto,q_auto/w_1120,h_732,c_fill,g_auto/v1661347429/india-food-dal-makani/india-food-dal-makani-1120x732.jpg">
+                            <div class="details">
+                                <h2>Dal Makhani</h2>
+                                <p>A buttery beauty, dal makhani, is a rich lentil dish often topped with cream which delights the tastebuds, and is popular on special occasions across India. </p>
+                                <a href="#">View Recipe</a>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <h1>Recipe</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque nemo sed consequatur minima, minus mollitia soluta perspiciatis. Unde, cum incidunt aut enim, laudantium deleniti nihil veritatis adipisci eum eveniet fuga? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita ad dolores alias illum reiciendis facere dolore et ipsa tenetur! Magni excepturi corrupti sunt quis facilis dicta atque obcaecati doloribus eligendi.
+                            Quam sed est, officiis repudiandae optio voluptate ut ratione nisi perspiciatis aliquid dolorum incidunt aperiam facilis odio culpa? Quos maiores laborum earum perferendis alias, qui repellendus. Eveniet commodi enim quisquam!
+                            Necessitatibus perspiciatis laborum dignissimos aliquid a, aut eum explicabo doloremque numquam facilis, fugiat fuga ipsam unde voluptatibus officiis beatae expedita, doloribus iste magni! Animi ullam ipsum maiores consequatur, sapiente veniam?
+                            Pariatur ex, minima esse, at architecto expedita quibusdam sequi exercitationem cum veritatis obcaecati assumenda iusto debitis totam molestiae porro quos iure velit? Provident possimus obcaecati omnis at, incidunt recusandae quibusdam.</p>
+                        </div>
+                    </div>
+                </div>               
+                <!-- .....single recipe ends here...... -->
+
+                 <!-- ....single recipe starts here.... -->
+                 <div class="card-container">
+                    <div class="card">
+                        <div class="card-front">
+
+                            <img src="https://res.cloudinary.com/rainforest-cruises/images/c_fill,g_auto/f_auto,q_auto/w_1120,h_732,c_fill,g_auto/v1661347382/india-food-ras-malai/india-food-ras-malai-1120x732.jpg">
+                            <div class="details">
+                                <h2>Ras Malai</h2>
+                                <p>Rarely maligned, ras malai is simply too delicious for food critics to say a bad word about this sweet-smelling (and tasting!) spongy treat. </p>
+                                <a href="#">View Recipe</a>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <h1>Recipe</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque nemo sed consequatur minima, minus mollitia soluta perspiciatis. Unde, cum incidunt aut enim, laudantium deleniti nihil veritatis adipisci eum eveniet fuga? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita ad dolores alias illum reiciendis facere dolore et ipsa tenetur! Magni excepturi corrupti sunt quis facilis dicta atque obcaecati doloribus eligendi.
+                            Quam sed est, officiis repudiandae optio voluptate ut ratione nisi perspiciatis aliquid dolorum incidunt aperiam facilis odio culpa? Quos maiores laborum earum perferendis alias, qui repellendus. Eveniet commodi enim quisquam!
+                            Necessitatibus perspiciatis laborum dignissimos aliquid a, aut eum explicabo doloremque numquam facilis, fugiat fuga ipsam unde voluptatibus officiis beatae expedita, doloribus iste magni! Animi ullam ipsum maiores consequatur, sapiente veniam?
+                            Pariatur ex, minima esse, at architecto expedita quibusdam sequi exercitationem cum veritatis obcaecati assumenda iusto debitis totam molestiae porro quos iure velit? Provident possimus obcaecati omnis at, incidunt recusandae quibusdam.</p>
+                        </div>
+                    </div>
+                </div>               
+                <!-- .....single recipe ends here...... -->
+
+                  <!-- ....single recipe starts here.... -->
+                  <div class="card-container">
+                    <div class="card">
+                        <div class="card-front">
+
+                            <img src="https://res.cloudinary.com/rainforest-cruises/images/c_fill,g_auto/f_auto,q_auto/w_1120,h_732,c_fill,g_auto/v1661347413/india-food-kulfi/india-food-kulfi-1120x732.jpg">
+                            <div class="details">
+                                <h2>Kulfi</h2>
+                                <p>Ice-cream lolly-style. Holla a kulfiwallah (Kulfi street vendor) and try out this delicious, unmissable dessert. </p>
+                                <a href="#">View Recipe</a>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <h1>Recipe</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque nemo sed consequatur minima, minus mollitia soluta perspiciatis. Unde, cum incidunt aut enim, laudantium deleniti nihil veritatis adipisci eum eveniet fuga? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita ad dolores alias illum reiciendis facere dolore et ipsa tenetur! Magni excepturi corrupti sunt quis facilis dicta atque obcaecati doloribus eligendi.
+                            Quam sed est, officiis repudiandae optio voluptate ut ratione nisi perspiciatis aliquid dolorum incidunt aperiam facilis odio culpa? Quos maiores laborum earum perferendis alias, qui repellendus. Eveniet commodi enim quisquam!
+                            Necessitatibus perspiciatis laborum dignissimos aliquid a, aut eum explicabo doloremque numquam facilis, fugiat fuga ipsam unde voluptatibus officiis beatae expedita, doloribus iste magni! Animi ullam ipsum maiores consequatur, sapiente veniam?
+                            Pariatur ex, minima esse, at architecto expedita quibusdam sequi exercitationem cum veritatis obcaecati assumenda iusto debitis totam molestiae porro quos iure velit? Provident possimus obcaecati omnis at, incidunt recusandae quibusdam.</p>
+                        </div>
+                    </div>
+                </div>               
+                <!-- .....single recipe ends here...... -->
+
+                  <!-- ....single recipe starts here.... -->
+                  <div class="card-container">
+                    <div class="card">
+                        <div class="card-front">
+
+                            <img src="https://res.cloudinary.com/rainforest-cruises/images/c_fill,g_auto/f_auto,q_auto/w_1120,h_732,c_fill,g_auto/v1661347409/india-food-lassi/india-food-lassi-1120x732.jpg">
+                            <div class="details">
+                                <h2>Lassi</h2>
+                                <h3>Famous in Punjab</h3>
+                                <p>Last but not least, lassi are as dependable as Lassie when it comes to quenching your thirst and satisfying your desire for dessert.</p>
+                                <a href="#">View Recipe</a>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <h1>Recipe</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque nemo sed consequatur minima, minus mollitia soluta perspiciatis. Unde, cum incidunt aut enim, laudantium deleniti nihil veritatis adipisci eum eveniet fuga? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita ad dolores alias illum reiciendis facere dolore et ipsa tenetur! Magni excepturi corrupti sunt quis facilis dicta atque obcaecati doloribus eligendi.
+                            Quam sed est, officiis repudiandae optio voluptate ut ratione nisi perspiciatis aliquid dolorum incidunt aperiam facilis odio culpa? Quos maiores laborum earum perferendis alias, qui repellendus. Eveniet commodi enim quisquam!
+                            Necessitatibus perspiciatis laborum dignissimos aliquid a, aut eum explicabo doloremque numquam facilis, fugiat fuga ipsam unde voluptatibus officiis beatae expedita, doloribus iste magni! Animi ullam ipsum maiores consequatur, sapiente veniam?
+                            Pariatur ex, minima esse, at architecto expedita quibusdam sequi exercitationem cum veritatis obcaecati assumenda iusto debitis totam molestiae porro quos iure velit? Provident possimus obcaecati omnis at, incidunt recusandae quibusdam.</p>
+                        </div>
+                    </div>
+                </div>               
+                <!-- .....single recipe ends here...... -->
+
+                  <!-- ....single recipe starts here.... -->
+                  <div class="card-container">
+                    <div class="card">
+                        <div class="card-front">
+
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXnwWVY7i0p-XUQIPiOEXCAUMsf2evHs0e6hT5ALBWT7XPzvKNsnj7-V1Fh5F_OrVW7Ec&usqp=CAU">
+                            <div class="details">
+                                <h2>Dal Chawal</h2>
+                                <h3>Everyone's favorite dish</h3>
+                                <p>Lorem ipsum dolor sit, Adipisci voluptatum harum nulla, officia assumenda cum. </p>
+                                <a href="#">View Recipe</a>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <h1>Recipe</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque nemo sed consequatur minima, minus mollitia soluta perspiciatis. Unde, cum incidunt aut enim, laudantium deleniti nihil veritatis adipisci eum eveniet fuga? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita ad dolores alias illum reiciendis facere dolore et ipsa tenetur! Magni excepturi corrupti sunt quis facilis dicta atque obcaecati doloribus eligendi.
+                            Quam sed est, officiis repudiandae optio voluptate ut ratione nisi perspiciatis aliquid dolorum incidunt aperiam facilis odio culpa? Quos maiores laborum earum perferendis alias, qui repellendus. Eveniet commodi enim quisquam!
+                            Necessitatibus perspiciatis laborum dignissimos aliquid a, aut eum explicabo doloremque numquam facilis, fugiat fuga ipsam unde voluptatibus officiis beatae expedita, doloribus iste magni! Animi ullam ipsum maiores consequatur, sapiente veniam?
+                            Pariatur ex, minima esse, at architecto expedita quibusdam sequi exercitationem cum veritatis obcaecati assumenda iusto debitis totam molestiae porro quos iure velit? Provident possimus obcaecati omnis at, incidunt recusandae quibusdam.</p>
+                        </div>
+                    </div>
+                </div>               
+                <!-- .....single recipe ends here...... -->
+
+                  <!-- ....single recipe starts here.... -->
+                  <div class="card-container">
+                    <div class="card">
+                        <div class="card-front">
+
+                            <img src="https://t4.ftcdn.net/jpg/01/43/11/37/240_F_143113707_V02NQT7EtedAnJ8uw01GmxPnLv84vnSG.jpg">
+                            <div class="details">
+                                <h2>Paan</h2>
+                                <h3></h3>
+                                <p>Close-up of a meetha paan, made of betel leaves filled with a range of sweet jam-like spreads and crunchy titbits like tutti-frutti, cherries,...
+                                </p>
+                                <a href="#">View Recipe</a>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <h1>Recipe</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque nemo sed consequatur minima, minus mollitia soluta perspiciatis. Unde, cum incidunt aut enim, laudantium deleniti nihil veritatis adipisci eum eveniet fuga? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita ad dolores alias illum reiciendis facere dolore et ipsa tenetur! Magni excepturi corrupti sunt quis facilis dicta atque obcaecati doloribus eligendi.
+                            Quam sed est, officiis repudiandae optio voluptate ut ratione nisi perspiciatis aliquid dolorum incidunt aperiam facilis odio culpa? Quos maiores laborum earum perferendis alias, qui repellendus. Eveniet commodi enim quisquam!
+                            Necessitatibus perspiciatis laborum dignissimos aliquid a, aut eum explicabo doloremque numquam facilis, fugiat fuga ipsam unde voluptatibus officiis beatae expedita, doloribus iste magni! Animi ullam ipsum maiores consequatur, sapiente veniam?
+                            Pariatur ex, minima esse, at architecto expedita quibusdam sequi exercitationem cum veritatis obcaecati assumenda iusto debitis totam molestiae porro quos iure velit? Provident possimus obcaecati omnis at, incidunt recusandae quibusdam.</p>
+
+                    </div>
+                </div>               
+                <!-- .....single recipe ends here...... -->
+
+                
+                 
+
+
+
+
+                
+
+
+
+            </div>
+        </div>
+    </main>
+    
+</body>
+</html>
